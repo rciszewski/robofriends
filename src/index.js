@@ -12,7 +12,10 @@ const store = createStore(searchRobots);
 const root = createRoot(document.getElementById('root'));
 root.render(
   <StrictMode> 
-    <App store={store}/>
+    <Provider store={store}>
+      <App store={store}/>
+    </Provider>
+    
   </StrictMode>
 );
 
